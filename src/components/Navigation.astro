@@ -1,0 +1,31 @@
+---
+import Logo from "../components/Logo.astro";
+import MainMenu from "../components/MainMenu.astro";
+import HamburguerMenu from "./HamburguerMenu.astro";
+---
+
+<nav id="nav_header" class="fixed w-full z-30 top-0 text-white">
+  <div
+    class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
+  >
+    <Logo />
+    <HamburguerMenu />
+    <MainMenu />
+  </div>
+  <hr class="border-b border my-0 py-0 border-orange-400 opacity-90" />
+</nav>
+
+<script>
+  document.addEventListener("scroll", function () {
+    let scrollpos = window.scrollY;
+    let nav_header = document.getElementById("nav_header");
+
+    if (scrollpos > 20) {
+      nav_header.classList.add("bg-white");
+      nav_header.classList.add("shadow");
+    } else {
+      nav_header.classList.remove("bg-white");
+      nav_header.classList.remove("shadow");
+    }
+  });
+</script>

@@ -1,4 +1,9 @@
 ---
+import Footer from "../sections/Footer.astro";
+import Hero from "../sections/Hero.astro";
+import Navigation from "../components/Navigation.astro";
+import Services from "../sections/Services.astro";
+
 ---
 
 <html lang="en">
@@ -7,9 +12,15 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>YourCar | Auto secure </title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main class="leading-normal tracking-normal text-white">
+			<Navigation />
+			<Hero />
+			<Services />
+			<Footer />
+		</main>
 	</body>
 </html>
