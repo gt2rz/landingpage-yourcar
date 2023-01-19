@@ -1,0 +1,47 @@
+---
+import Section from "./Section.astro";
+import SectionCard from "./Section.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class="bg-white border-b py-8">
+  <div class="container max-w-5xl mx-auto m-8">
+    <h1
+      class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+    >
+      { title }
+    </h1>
+    <div class="w-full mb-4">
+      <div
+        class="h-1 mx-auto bg-yellow-500 w-64 opacity-25 my-0 py-0 rounded-t"
+      >
+      </div>
+    </div>
+
+
+    <SectionCard image="images/1.svg">
+      <p slot="title"> Nosotros lo hacemos por tí.</p>
+      <p slot="subtitle">
+        Mantener tu vehículo al día, puede no ser una tarea fácil
+      </p>
+      <p slot="description">
+        Deja en nuestras manos todos esos trámites que te quitan tiempo.
+        Enfocate en disfrutar tu vehiculo al máximo.
+      </p>
+    </SectionCard>
+
+    <SectionCard image="images/moto.svg" orientation="left">
+      <p slot="title"> Lorem ipsum dolor sit amet</p>
+      <p slot="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, molestias? </p>
+      <p slot="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+        ipsum eu nunc commodo posuere et sit amet ligula.
+      </p>
+    </SectionCard>
+  </div>
+</section>

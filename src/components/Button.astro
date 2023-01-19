@@ -3,9 +3,12 @@ interface Props{
     type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
-const { type } = Astro.props
+const { type = 'button' } = Astro.props
 ---
 
-<button type={type} class="inline-flex items-center px-6 py-4 bg-black border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-900 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
-    <slot />
+<button
+  type={type}
+  class="mx-auto lg:mx-0 bg-black text-white font-bold rounded-lg my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+>
+  <slot />
 </button>
