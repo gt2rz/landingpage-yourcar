@@ -1,0 +1,144 @@
+---
+import PlanCard from './PlanCard.astro'
+import ButtonLink from '../ButtonLink.astro';
+---
+
+<section id="plans" class="bg-white py-8">
+  <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+    <h1
+      class="
+        w-full
+        my-2
+        text-5xl
+        font-bold
+        leading-tight
+        text-center text-gray-800
+      "
+    >
+      Planes
+    </h1>
+    <div class="w-full mb-4">
+      <div
+        class="h-1 mx-auto bg-yellow-400 w-64 my-0 py-0 rounded-t"
+      >
+      </div>
+    </div>
+    <h6
+      class="
+        w-full
+        my-2
+        text-xl
+        font-bold
+        leading-tight
+        text-center text-gray-700
+      "
+    >
+      Elige el plan que más se adapte a tus necesidades
+    </h6>
+    <div class="w-full mb-4">
+      <div
+        class="
+            h-1
+            mx-auto
+            gradient
+            w-64
+            opacity-25
+            my-0
+            py-0
+            rounded-t
+        "
+      ></div>
+    </div>
+    <div
+      class="
+        flex flex-col
+        sm:flex-row
+        justify-center
+        pt-12
+        my-12
+        sm:my-4
+      "
+    >
+      <PlanCard>
+        <p slot="title">
+          Básico
+        </p>
+        <div slot="benefits">
+            <li class="py-4">
+                5 Lorem ipsum dolor sit amet.
+            </li>
+            <li class="py-4">
+                10 Lorem ipsum dolor sit amet.
+            </li>
+        </div>
+        <div slot="payment">
+            <p>
+                $5 <span class="text-base">Pago anual</span>
+            </p>                           
+        </div>
+        <p slot="action" class="mt-6">
+          <ButtonLink  link="#call-to-action">
+            Ver más
+          </ButtonLink>
+        </p>
+      </PlanCard>
+
+      <PlanCard important>
+        <p slot="title">
+          Premium
+        </p>
+        <div slot="benefits">
+            <li class="py-4">
+                5 Lorem ipsum dolor sit amet.
+            </li>
+            <li class="py-4">
+                10 Lorem ipsum dolor sit amet.
+            </li>
+            <li class="py-4">
+                15 Lorem ipsum dolor sit amet.
+            </li>
+        </div>
+        <div slot="payment">
+            <p>
+                $10 <span class="text-base">Pago anual</span>
+            </p>                           
+        </div>
+        <p slot="action" class="mt-6">
+          <ButtonLink  link="#call-to-action">
+            Ver más
+          </ButtonLink>
+        </p>
+      </PlanCard>
+
+      <PlanCard>
+        <p slot="title">
+          VIP
+        </p>
+        <div slot="benefits">
+            <li class="py-4">
+                5 Lorem ipsum dolor sit amet.
+            </li>
+            <li class="py-4">
+                10 Lorem ipsum dolor sit amet.
+            </li>
+            <li class="py-4">
+                15 Lorem ipsum dolor sit amet.
+            </li>
+            <li class="py-4">
+                20 Lorem ipsum dolor sit amet.
+            </li>
+        </div>
+        <div slot="payment">
+            <p>
+                $15 <span class="text-base">Pago anual</span>
+            </p>                           
+        </div>
+        <p slot="action" class="mt-6">
+          <ButtonLink  link="#call-to-action">
+            Ver más
+          </ButtonLink>
+        </p>
+      </PlanCard>
+    </div>
+  </div>
+</section>

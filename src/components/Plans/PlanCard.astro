@@ -1,0 +1,40 @@
+---
+interface Props{
+  important?: boolean;
+}
+
+const classImportant = Astro.props.important ? 'bg-yellow-200 border border-yellow-400' : 'bg-white border border-yellow-400';
+
+const { important = false } = Astro.props;
+---
+
+<div
+  class={`flex flex-col w-5/6 lg:w-1/4 rounded-lg bg-white mx-2 text-gray-800 shadow ${classImportant}`}
+>
+  <div
+    class="flex-1 text-gray-900 rounded-t-lg rounded-b-none overflow-hidden"
+  >
+    <div
+      class="p-8 text-3xl font-bold text-center border-b-2 border-yellow-400"
+    >
+      <slot name="title" />
+    </div>
+
+    <ul class="w-full text-center text-sm">
+      <slot name="benefits" />
+    </ul>
+
+  </div>
+
+  <div
+    class="flex-none mt-auto overflow-hidden p-6 text-black"
+  >
+    <div class="w-full py-6 text-5xl font-bold text-center align-middle justify-center">
+      <slot name="payment" />
+    </div>
+    <div class="flex items-center justify-center py-4">
+      <slot name="action" />
+    </div>
+  </div>
+
+</div>

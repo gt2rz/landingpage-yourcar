@@ -4,25 +4,32 @@ import Hero from "../components/Hero/View.astro";
 import Navigation from "../components/Navigation/View.astro";
 import Services from "../components/Services/View.astro";
 import Description from "../components/Description/View.astro";
-
+import Plans from "../components/Plans/View.astro";
+import CallToAction from "../components/CallToAction/View.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>YourCar | Auto secure </title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-	</head>
-	<body>
-		<main class="leading-normal tracking-normal text-white">
-			<Navigation />
-			<Hero />
-			<Description title="Que ofrecemos"/>
-			<Services />
-			<Footer />
-		</main>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>YourCar | Auto secure</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <main class="leading-normal tracking-normal text-white">
+      <Navigation />
+      <Hero />
+      <Description title="Que ofrecemos" />
+      <Services />
+      <Plans />
+      <CallToAction />
+      <Footer />
+    </main>
+  </body>
 </html>

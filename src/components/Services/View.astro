@@ -8,13 +8,19 @@ interface Props {
 const { title = "Services" } = Astro.props;
 ---
 
-<section class="bg-gray-100 border-b py-8 pb-10">
+<section id="services" class="bg-gray-100 border-b py-8 pb-10">
   <div class="container mx-auto flex flex-wrap pt-4 pb-12">
     <h1
       class="w-full my-2 text-5xl font-bold leading-tight text-center text-black"
     >
       Servicios
     </h1>
+    <div class="w-full mb-4">
+      <div
+        class="h-1 mx-auto bg-zinc-500 w-64 opacity-25 my-0 py-0 rounded-t"
+      >
+      </div>
+    </div>
     <div class="w-full mb-16">
       <div class="h-1 mx-aut w-full justify-center my-0 py-0">
         <p class="text-black w-full text-center my-0 py-0">
@@ -32,7 +38,7 @@ const { title = "Services" } = Astro.props;
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, laborum!
       </p>
       <p slot="action">
-        <ButtonLink link="/servicios/servicio-1">
+        <ButtonLink link="#call-to-action">
           Ver más 
         </ButtonLink>
       </p>
@@ -47,7 +53,7 @@ const { title = "Services" } = Astro.props;
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, laborum!
       </p>
       <p slot="action">
-        <ButtonLink link="/servicios/servicio-2">
+        <ButtonLink  link="#call-to-action">
           Ver más 
         </ButtonLink>
       </p>
@@ -62,7 +68,7 @@ const { title = "Services" } = Astro.props;
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, laborum!
       </p>
       <p slot="action">
-        <ButtonLink link="/servicios/servicio-2">
+        <ButtonLink  link="#call-to-action">
           Ver más 
         </ButtonLink>
       </p>

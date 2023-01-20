@@ -1,29 +1,50 @@
 ---
-import Logo from '../Logo.astro'  
-import { topics }  from '../../data/topicsFooter.js'
+import TopicFooter from "./TopicFooter.astro";
+import { topics } from "../../data/topicsFooter.js";
+import Copyright from "./Copyright.astro";
+import Logo from "../Logo.astro";
 ---
 
 <footer class="bg-black text-white">
-    <div class="container mx-auto px-8">
-        <div class="w-full flex flex-col md:flex-row py-6">
-            <div class="flex-1 mb-6">
-                <Logo />
-            </div>
-            <!-- <topic :items="links" title="Enlaces"></topic>
-            <topic :items="legal" title="Legal"></topic>
-            <topic :items="social" title="Redes Sociales"></topic>
-            <topic :items="company" title="Nosotros"></topic> -->
-        </div>
+  <div class="flex">
+    <div class="w-full flex flex-1 text-center justify-center">
+      <div class="mt-16">
+        <Logo alternative />
+        <small class="pt-4">
+          Adquiere nuestros planes y olvidate del papeleo
+        </small>
+      </div>
+
     </div>
-    <div class="container mx-auto px-8">
-        <div class="w-full flex flex-col md:flex-row py-6 justify-center text-gray-500">
-            <span class="mr-1">With</span> 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-            <a href="http://www.bypanas.com" class="ml-1 text-center hover:text-yellow-500">
-                panasteam.com
-            </a>
-        </div>
+    <div class="container mx-auto px-8 flex-1">
+      <div class="w-full flex flex-col md:flex-row py-6 mx-auto">
+        <section class="w-full pr-2">
+          <p class="font-bold mb-4">Enlaces</p>
+          <ul>
+            <TopicFooter link="#">Inicio</TopicFooter>
+            <TopicFooter link="#plans">Planes</TopicFooter>
+            <TopicFooter link="#services">Servicios</TopicFooter>
+          </ul>
+        </section>
+        <section class="w-full pr-2">
+          <p class="font-bold mb-4">Redes Sociales</p>
+          <ul>
+            <TopicFooter link="#">Facebook</TopicFooter>
+            <TopicFooter link="#">Twitter</TopicFooter>
+            <TopicFooter link="#">Instagram</TopicFooter>
+          </ul>
+        </section>
+        <section class="w-full pr-2">
+          <p class="font-bold mb-4">Nosotros</p>
+          <ul>
+            <TopicFooter link="#">Quienes somos</TopicFooter>
+            <TopicFooter link="#">Trabaja con nosotros</TopicFooter>
+            <TopicFooter link="#">Blog</TopicFooter>
+          </ul>
+        </section>
+      </div>
     </div>
+  </div>
+
+  <Copyright />
 </footer>
